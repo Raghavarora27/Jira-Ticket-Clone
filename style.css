@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  /* Extra height add na ho 
+  jitni height di h utne me hi border,padding etc... height ho */
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+
+.navbar {
+  height: 12%;
+  width: 100vw;
+  display: flex;
+  background-color: #333333;
+}
+
+.grid {
+  background-color: #f2f2f2;
+  width: 100vw;
+  min-height: 88%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.filter-container,
+.action-container {
+  height: 75%;
+  background-color: #444444;
+  margin-left: 5rem;
+  margin-top: 1.5vh;
+  border-radius: 5px;
+}
+
+.filter-container {
+  width: 18rem;
+  display: flex;
+}
+
+.action-container {
+  width: 8rem;
+  display: flex;
+}
+
+.filter {
+  width: 25%;
+  border-radius: 5px;
+}
+
+/* pseudo class of filter || yeh filter element ki state ko define kar rha h  */
+.filter:hover {
+  background-color: #393939;
+}
+
+.filter div {
+  border-radius: 5px;
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  /* horizontal center */
+  margin-top: 1rem;
+}
+
+.pink-color-btn,
+.pink {
+  background-color: #d595aa;
+}
+
+.blue-color-btn,
+.blue {
+  background-color: #5ecdde;
+}
+
+.green-color-btn,
+.green {
+  background-color: #91e6c7;
+}
+
+.black-color-btn,
+.black {
+  background-color: black;
+}
+
+.add,
+.delete {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  cursor: default;
+}
+
+.add {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.3rem;
+}
+
+.delete {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.8rem;
+}
+
+.add:hover,
+.delete:hover {
+  background-color: #393939;
+}
+
+.deleteState,.selected-filter{
+  background-color: #393939!important;
+}
+
+.modal-container {
+  height: 18rem;
+  width: 35rem;
+  display: flex;
+  position: fixed;
+  top: calc((100vh - 18rem) / 2);
+  left: calc((100vw - 35rem) / 2);
+  box-shadow: -10px 10px 18px 0.2px #aaaa;
+}
+
+.writing-area {
+  height: 100%;
+  width: 70%;
+  background-color: white;
+  padding: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.8rem;
+  outline: none;
+  overflow-y: auto;
+}
+
+.filter-area {
+  height: 100%;
+  width: 30%;
+  background-color: #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical center */
+  align-items: center; /* Horizontal center */
+}
+
+.modal-filter {
+  width: 50%;
+  height: 3rem;
+  margin-bottom: 7px;
+  opacity: 0.7;
+}
+
+.modal-filter:hover {
+  opacity: 1;
+}
+
+.ticket {
+  height: 8rem;
+  width: 15rem;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.ticket-color {
+  height: 5%;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+
+.ticket-id {
+  height: 5%;
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #989393;
+}
+
+.ticket-box {
+  height: 90%;
+  width: 100%;
+  outline: none;
+  padding: 1.5rem;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: auto;
+}
+
+.active-modal-filter {
+  border: 3px solid;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .ticket{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+
+  .add{
+    font-size: 5rem;
+  }
+
+  .delete{
+    font-size: 4.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-container,.action-container{
+    height: 64%;
+    margin-left: 1rem;  
+    margin-right: 1rem;
+    margin-top: 2.2vh;
+  }
+
+  .modal-container{
+    height: 16rem;
+    width: 24rem;
+    top: calc((100vh - 14rem) / 2);
+    left: calc((100vw - 24rem) / 2);
+  }
+
+  .add {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.3rem;
+  }
+  
+  .delete {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
+  }
+  
+}
